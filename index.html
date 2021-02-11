@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Prashant Sinha</title>
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="img/dp2.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/969b7bf82a.js" crossorigin="anonymous"></script> <!-- fontawesome -->
+  <style>
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+    position: relative;
+  }
+  h2 {
+    font-size: 26px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 800;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }  
+  hr {
+    height: 4px;
+    width: 65px;
+    text-align: center;
+    position: relative;
+    background: #607d8b47;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    border: 0;
+  }
+  .jumbotron {
+    background-color: #f4511e;
+    color: #fff;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #f4511e;
+  }
+  .carousel-indicators li {
+    border-color: #f4511e;
+  }
+  .carousel-indicators li.active {
+    background-color: #f4511e;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid #f4511e; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #f4511e;
+    background-color: #fff !important;
+    color: #f4511e;
+  }
+  .panel-heading {
+    color: #fff !important;
+    background-color: #f4511e !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #f4511e;
+    color: #fff;
+  }
+  .navbar {
+    background-color: #121d1f; /*#f4511e*/
+    z-index: 9999;
+    border: 0;
+    font-size: 14px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 2px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #121d1f !important;  /*#f4511e*/
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  .slideanim {
+    visibility:hidden;
+  }
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+  #contact{
+    color: #fff !important;
+    background-color: #121d1a;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    letter-spacing: .5px;
+  }
+  #contact .social {
+    margin-top: 30px;
+  }
+  #contact .social ul li {
+    display: inline-block;
+    margin: 0 20px;
+  }
+  #contact .social i.fa {
+    font-size: 30px;
+    padding: 4px 5px;
+    color: #fff;
+    transition: all 0.2s;
+  }
+  #contact .social i.fa:hover {
+    color: #0e76a8;
+  }
+  </style>
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top" data-spy="affix" data-offset-top="197">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage" style="font-size: 24px; font-family: sans-serif; letter-spacing: 0;"><strong>Prashant Sinha</strong></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#education">EDUCATION</a></li>
+        <li><a href="#skills">SKILLS</a></li>
+        <li><a href="#blog">BLOG</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<img src="img/quote2.jpg" style="width: 100%; margin-top: 50px;">
+
+<!-- About Me -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-3">
+      <span><img class="img-responsive img-rounded" src="img/dp2.jpg" style="margin-top: 20px;"></span>
+    </div>   
+    <div class="col-sm-9">
+      <h2>About Me</h2>
+      <p style="font-size: 18px;" class="text-justify">I am an enthusiastic learner, mostly interested in data science and machine learning and their applications in developing business model. I have previously worked on marketing research and developed business model using business analytics. I have also keen interest in core material sciences. Currently I am working on biomaterials, studying the cytocompatability of porous hydroxyapatite scaffolds using finite element analysis under the guidance of Prof. Kantesh Balani.</p>
+      <p style="font-size: 18px;" class="text-justify">In my free time I like to watch TV show. Some of my favorite TV shows include Game of Thrones, Friends, The Big Bang Theory, TMKOC. ZNMD is my favorite Bollywood movie.</p>
+      <p style="font-size: 18px;" class="text-justify">I sometimes try to write down my experience on <a href="#blog">my blog</a> (coming soon...). Do read if you got some time!</p>
+    </div>
+  </div>
+</div>
+
+<!-- Education -->
+<div id="education" class="container-fluid bg-grey">
+  <h2>Education</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p style="line-height: 25px; font-weight: 500;"><span style="font-size: 22px; color: #3b3a3a;">Indian Institute of Technology<br>Kanpur, India</span><br><span style="font-size: 18px;">Bachelor of Technology</span><br><span style="font-size: 18px;">CPI/CGPA: 7.8/10.0</span></p> 
+    </div>
+    <div class="col-sm-3">
+      <p><i>2018-Present</i></p>
+    </div>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-sm-5">
+      <p style="line-height: 25px; font-weight: 500;"><span style="font-size: 22px; color: #3b3a3a;">R P S School</span><br><span style="font-size: 18px;">Higher secondary education</span><br><span style="font-size: 18px;">Score: 90.0/100</span></p>
+    </div>
+    <div class="col-sm-3">
+      <p><i>2016-2018</i></p>
+    </div>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-sm-5">
+      <p style="line-height: 25px; font-weight: 500;"><span style="font-size: 22px; color: #3b3a3a;">R P S School</span><br><span style="font-size: 18px;">Secondary education</span><br><span style="font-size: 18px;">Score: 10.0/10.0</span></p>
+    </div>
+    <div class="col-sm-3">
+      <p><i>2012-2016</i></p>
+    </div>
+  </div>
+</div>
+
+<!-- Skills -->
+<div id="skills" class="container-fluid text-center">
+  <h2>SKILLS</h2>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-3">
+      <img src="img/c.png">
+      <h4>C</h4>
+    </div>
+    <div class="col-sm-3">
+      <img src="img/python.png">
+      <h4>Python</h4>
+    </div>
+    <div class="col-sm-3">
+      <img src="img/html.png">
+      <h4>HTML 5</h4>
+    </div>
+    <div class="col-sm-3">
+      <img src="img/css.png">
+      <h4>CSS 3</h4>
+    </div>
+  </div>
+  <br><br>
+  <div class="row slideanim">
+    <div class="col-sm-3">
+      <img src="img/javascript.png">
+      <h4>Javascript</h4>
+    </div>
+    <div class="col-sm-3">
+      <img src="img/inventor.png" style="height: 64px;">
+      <h4>Autodesk Inventor</h4>
+    </div>
+    <div class="col-sm-3">
+      <img src="img/matlab.png" style="height: 64px;">
+      <h4>MatLab</h4>
+    </div>
+    <div class="col-sm-3">
+      <img src="img/bootstrap.png" style="height: 64px;">
+      <h4>Bootstrap 3</h4>
+    </div>
+  </div>
+
+  <h2>Industrial Skills</h2><br>
+  <div class="row slideanim">
+    <div class="col-sm-3">
+      <img src="img/data.png" style="height: 64px;">
+      <h4>Data Analytics</h4>
+    </div>
+    <div class="col-sm-3">
+      <img src="img/market.jpg" style="height: 64px;">
+      <h4>Marketing Research</h4>
+    </div>
+    <div class="col-sm-3">
+      <img src="img/dev.jpg" style="height: 64px;">
+      <h4>Business Development</h4>
+    </div>
+    <div class="col-sm-3">
+      <img src="img/ml.jpg" style="height: 64px;">
+      <h4>Machine Learning</h4>
+    </div>
+  </div>
+</div>
+
+<!-- Blog -->
+<div id="blog" class="container-fluid text-center bg-grey">
+  <h2 class="text-left">Blog</h2><br>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <a href="#blog">
+          <img src="img/view.jpg" alt="Manali" style="width: 100%;">
+        </a>
+        <p><strong>Coming soon...</strong></p>
+        <p><!-- A trip to heaven !!! --></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Articles -->
+<div id="blog" class="container-fluid text-center">
+  <h2 class="text-left text-capitalize">Give <span class="text-lowercase">it a read...</span></h2><br>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <a href="https://finshots.in/archive/the-great-semiconductor-shortage/" target="_blank">
+          <img src="img/scFin.jpg" alt="FinShot" style="width: 100%;">
+        </a>
+          <p><strong>The Great Semiconductor Shortage</strong></p>
+          <p>Credit: Finshots.in<br>Feb 2021</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <a href="https://finshots.in/archive/an-explainer-on-tree-valuation/" target="_blank">
+          <img src="img/tree.jpg" alt="" style="width: 100%;">
+        </a>
+        <p><strong>What is the value of a tree?</strong></p>
+        <p>Credit: Finshots.in<br>Feb 2021</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <a href="https://www.mckinsey.com/business-functions/sustainability/our-insights/climate-risk-and-response-in-asia" target="_blank">
+          <img src="img/climate.jpg" alt="" style="width: 100%;">
+        </a>
+        <p><strong>Climate risk and response in Asia</strong></p>
+        <p>Credit: McKinsey & Company<br>Jan 2021</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Contact -->
+<div id="contact" class="container-fluid text-center">
+  <h2 style="color: #d7dcdf;">CONTACT</h2>
+  <br>
+  <div class="row">
+    <div class="col-sm-2 col-sm-offset-3">
+      <i class="fa fa-map-marker fa-2x"></i>
+      <p>Indian Institute of Technology<br>Kanpur-208016, India</p>
+    </div>
+    <div class="col-sm-2">
+      <i class="fa fa-mobile fa-2x"></i>
+      <p>+91 9559031434</p>
+    </div>
+    <div class="col-sm-2">
+      <i class="fa fa-envelope-o fa-2x"></i>
+      <p>pksinha@iitk.ac.in<br>prashantsinha252@gmail.com</p>
+    </div>
+  </div>
+
+  <div class="social">
+    <ul>
+      <li><a href="https://twitter.com/Prashan37212288" target="_blank"><i class="fa fa-twitter"></i></a></li>
+      <li><a href="https://www.instagram.com/_prashantsinha" target="_blank"><i class="fa fa-instagram"></i></a></li>
+      <li><a href="https://github.com/prashantsinha28" target="_blank"><i class="fa fa-github"></i></a></li>
+      <li><a href="https://www.linkedin.com/in/prashant-sinha-79a92416b/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+    </ul>
+  </div>
+
+  <div style="margin-top: 50px; margin-bottom: 0;">
+    Last updated: Feb 2021
+  </div>
+</div>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+</body>
+</html>
